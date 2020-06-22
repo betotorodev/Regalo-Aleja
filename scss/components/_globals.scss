@@ -19,11 +19,106 @@ $font-body: "Roboto Condensed", sans-serif;
 $font-title: "Sriracha", cursive;
 
 //tamaños de texto
-$base-size: 34px;
+$base-size: 48px;
+$body-size: 34px;
 
+// generales
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+h1 a {
+  color: $color-text;
+  text-decoration: none;
+  font-family: $font-title;
+  font-size: $base-size;
+  cursor: pointer;
+  &:hover {
+    color: $color-secondary;
+  }
+}
+
+.hidden {
+  display: none
+}
+
+// mixins
+
+@mixin container {
+  position: absolute;
+  left: 144px;
+  top: 46px;
+  max-width: 85%;
+  width: 100%;
+  height: 90%;
+  border-radius: 50px;
+  background-color: $color-white;
+}
+
+@mixin plantilla {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  width: 100%;
+  height: 100%;
+  &__cartas {
+    width: 50%;
+    border-right: 3px solid $color-text;
+    @include nombres;
+    h1 {
+      margin-bottom: 50px;
+    }
+  }
+  &__description {
+    @include description;
+  }
+}
+
+@mixin nombres {
+  grid-column: 1;
+  justify-self: center;
+  align-self: center;
+  font-size: $base-size;
+}
+
+@mixin description {
+  grid-column: 2;
+  align-self: center;
+  font-family: $font-body;
+  font-size: $base-size;
+}
+
+@mixin cartas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  padding: 2% 25% 0;
+  font-family: $font-body;
+  font-size: $body-size;
+  background-color: $color-white;
+  &__equis {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+  }
+  &__description {
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 10px;
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background: $color-secondary;
+    }
+  }
+}

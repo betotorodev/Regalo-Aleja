@@ -29,14 +29,7 @@
 }
 
 .container {
-  position: absolute;
-  left: 144px;
-  top: 46px;
-  max-width: 85%;
-  width: 100%;
-  height: 90%;
-  border-radius: 50px;
-  background-color: $color-white;
+ @include container;
 }
 
 .control {
