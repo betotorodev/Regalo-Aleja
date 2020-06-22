@@ -1,11 +1,19 @@
-import "./components/LuisaLetter.js";
-import "./components/LorenaLetter.js";
-import "./components/NicolasLetter.js";
+import "./components/cocha/LuisaLetter.js";
+import "./components/cocha/LorenaLetter.js";
+import "./components/cocha/NicolasLetter.js";
+import "./components/dancewa/CamilaLetter.js";
+import "./components/dancewa/PatriciaLetter.js";
+import "./components/primas/DanielaLetter.js";
+import "./components/primas/AdrianaLetter.js";
+import "./components/mac/FredyLetter.js";
+import "./components/mac/StefanyLetter.js";
 
 // lógica botón
 const inicio = document.getElementById('beging');
 const guevitas = document.getElementById('cochas');
 const exYuta = document.getElementById('dancewa');
+const hermanas = document.getElementById('primas');
+const amigos = document.getElementById('mac');
 const buttomDown = document.getElementById('down');
 
 buttomDown.addEventListener('click', handleClick)
@@ -32,5 +40,11 @@ function handleClick() {
   } else if (number === 2) {
     guevitas.classList.remove('guevitas');
     exYuta.classList.add('dancewa');
+  } else if (number === 3) {
+    exYuta.classList.remove('dancewa');
+    hermanas.classList.add('primas')
+  } else if (number === 4) {
+    hermanas.classList.remove('primas');
+    amigos.classList.add('mac');
   }
 }
