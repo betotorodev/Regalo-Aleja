@@ -7,6 +7,9 @@ import "./components/primas/DanielaLetter.js";
 import "./components/primas/AdrianaLetter.js";
 import "./components/mac/FredyLetter.js";
 import "./components/mac/StefanyLetter.js";
+import "./components/violeta/TiojohnLetter.js";
+import "./components/violeta/LeidyLetter.js";
+import "./components/violeta/BebeLetter.js";
 
 // lógica botón
 const inicio = document.getElementById('beging');
@@ -14,6 +17,7 @@ const guevitas = document.getElementById('cochas');
 const exYuta = document.getElementById('dancewa');
 const hermanas = document.getElementById('primas');
 const amigos = document.getElementById('mac');
+const millos = document.getElementById('violeta');
 const buttomDown = document.getElementById('down');
 
 buttomDown.addEventListener('click', handleClick)
@@ -46,5 +50,8 @@ function handleClick() {
   } else if (number === 4) {
     hermanas.classList.remove('primas');
     amigos.classList.add('mac');
+  } else if (number === 5) {
+    amigos.classList.remove('mac');
+    millos.classList.add('violeta');
   }
 }
