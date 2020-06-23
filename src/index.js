@@ -85,3 +85,9 @@ function handleClick() {
     final.classList.add('fin');
   }
 }
+
+// //experiment 
+
+// const cuerpo = document.querySelector('body')
+
+// cuerpo.addEventListener('load', () => console.log("cargando..."))
