@@ -11,6 +11,8 @@ import "./components/violeta/TiojohnLetter.js";
 import "./components/violeta/LeidyLetter.js";
 import "./components/violeta/BebeLetter.js";
 import "./components/elkin/ElkinLetter.js";
+import "./components/padrinos/MadrinaLetter.js";
+import "./components/padrinos/PadrinoLetter.js";
 
 // lógica botón
 const inicio = document.getElementById('beging');
@@ -20,6 +22,7 @@ const hermanas = document.getElementById('primas');
 const amigos = document.getElementById('mac');
 const millos = document.getElementById('violeta');
 const ecuador = document.getElementById('elkin');
+const familia2 = document.getElementById('padrinos');
 const buttomDown = document.getElementById('down');
 
 buttomDown.addEventListener('click', handleClick)
@@ -58,5 +61,8 @@ function handleClick() {
   } else if (number === 6) {
     millos.classList.remove('violeta');
     ecuador.classList.add('elkin');
+  } else if (number === 7) {
+    ecuador.classList.remove('elkin');
+    familia2.classList.add('padrinos');
   }
 }
