@@ -14,6 +14,8 @@ import "./components/elkin/ElkinLetter.js";
 import "./components/padrinos/MadrinaLetter.js";
 import "./components/padrinos/PadrinoLetter.js";
 import "./components/perrou/BetoLetter.js";
+import "./components/papas/PapaLetter.js";
+import "./components/papas/MamaLetter.js";
 
 // lógica botón
 const inicio = document.getElementById('beging');
@@ -25,6 +27,9 @@ const millos = document.getElementById('violeta');
 const ecuador = document.getElementById('elkin');
 const familia2 = document.getElementById('padrinos');
 const papasito = document.getElementById('perrou');
+const DonChepe = document.getElementById('papa');
+const sexy = document.getElementById('mama');
+const final = document.getElementById('fin');
 const buttomDown = document.getElementById('down');
 
 buttomDown.addEventListener('click', handleClick)
@@ -69,5 +74,14 @@ function handleClick() {
   } else if (number === 8) {
     familia2.classList.remove('padrinos');
     papasito.classList.add('perrou');
+  } else if (number === 9) {
+    papasito.classList.remove('perrou');
+    DonChepe.classList.add('papa');
+  } else if (number === 10) {
+    DonChepe.classList.remove('papa');
+    sexy.classList.add('mama');
+  } else if (number === 11) {
+    sexy.classList.remove('mama');
+    final.classList.add('fin');
   }
 }

@@ -29,6 +29,10 @@ $body-size: 34px;
   box-sizing: border-box;
 }
 
+html {
+  font-size: $base-size;
+}
+
 h1 a {
   color: $color-text;
   text-decoration: none;
