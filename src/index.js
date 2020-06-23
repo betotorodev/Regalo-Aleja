@@ -10,6 +10,7 @@ import "./components/mac/StefanyLetter.js";
 import "./components/violeta/TiojohnLetter.js";
 import "./components/violeta/LeidyLetter.js";
 import "./components/violeta/BebeLetter.js";
+import "./components/elkin/ElkinLetter.js";
 
 // lógica botón
 const inicio = document.getElementById('beging');
@@ -18,6 +19,7 @@ const exYuta = document.getElementById('dancewa');
 const hermanas = document.getElementById('primas');
 const amigos = document.getElementById('mac');
 const millos = document.getElementById('violeta');
+const ecuador = document.getElementById('elkin');
 const buttomDown = document.getElementById('down');
 
 buttomDown.addEventListener('click', handleClick)
@@ -53,5 +55,8 @@ function handleClick() {
   } else if (number === 5) {
     amigos.classList.remove('mac');
     millos.classList.add('violeta');
+  } else if (number === 6) {
+    millos.classList.remove('violeta');
+    ecuador.classList.add('elkin');
   }
 }
