@@ -13,6 +13,7 @@ import "./components/violeta/BebeLetter.js";
 import "./components/elkin/ElkinLetter.js";
 import "./components/padrinos/MadrinaLetter.js";
 import "./components/padrinos/PadrinoLetter.js";
+import "./components/perrou/BetoLetter.js";
 
 // lógica botón
 const inicio = document.getElementById('beging');
@@ -23,6 +24,7 @@ const amigos = document.getElementById('mac');
 const millos = document.getElementById('violeta');
 const ecuador = document.getElementById('elkin');
 const familia2 = document.getElementById('padrinos');
+const papasito = document.getElementById('perrou');
 const buttomDown = document.getElementById('down');
 
 buttomDown.addEventListener('click', handleClick)
@@ -64,5 +66,8 @@ function handleClick() {
   } else if (number === 7) {
     ecuador.classList.remove('elkin');
     familia2.classList.add('padrinos');
+  } else if (number === 8) {
+    familia2.classList.remove('padrinos');
+    papasito.classList.add('perrou');
   }
 }
